@@ -1,0 +1,69 @@
+\documentclass[12 pt]{report}
+
+\pagenumbering{arabic}
+
+%\usepackage{caption}
+\usepackage[nottoc]{tocbibind}
+\usepackage{hyperref}
+\usepackage[a4paper,top=2cm,left=3cm,right=3cm,bottom=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\newcommand{\tarc}{\mbox{\large$\frown$}}
+\newcommand{\arc}[1]{\stackrel{\tarc}{#1}}
+\usepackage{inputenc}
+\usepackage{hyperref}
+%\pagestyle{empty}
+
+\graphicspath{./}
+\usepackage{float}
+\usepackage{setspace}
+
+\linespread{1.3}
+\usepackage{multirow}
+\usepackage{amsfonts}
+\usepackage[export]{adjustbox}
+
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+
+\usepackage{mathtools}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+
+\usepackage{enumerate}
+
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue}
+
+
+\usepackage{xepersian}
+
+\settextfont[Scale = 1.0 ,
+             BoldFont = *Bd ,
+             ItalicFont = *It ,
+             BoldItalicFont = *BdIt ,
+             Extension = .ttf,
+             ExternalLocation=fonts/
+            ]{XB Yas} 
+%\settextfont[]{B Nazanin}
+\setdigitfont[Scale = 1.0 ,
+             BoldFont = *Bd ,
+             ItalicFont = *It ,
+             BoldItalicFont = *BdIt ,
+             Extension = .ttf,
+             ExternalLocation=fonts/
+            ]{XB Yas}
+%\pagestyle{empty}
+
+\begin{document}
+	\include{files/titlepage}
+	%\pagebreak
+	%\input{files/Summary}
+	\tableofcontents
+	%\input{files/introduction}
+	%\input{files/Verilog}
+	%\input{files/GoldenModel}
+	%\input{files/Functions}
+	%\input{files/RunGoldenModel}
+	%\input{files/Conclusion}
+	%\input{files/References}
+\end{document}
