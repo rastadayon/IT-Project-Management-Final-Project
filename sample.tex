@@ -5,7 +5,7 @@
 %\usepackage{caption}
 \usepackage[nottoc]{tocbibind}
 \usepackage{hyperref}
-\usepackage[a4paper,top=2cm,left=3cm,right=3cm,bottom=2cm]{geometry}
+\usepackage[a4paper,top=2cm,left=2.5cm,right=2.5cm,bottom=2cm]{geometry}
 \usepackage{graphicx}
 \usepackage{amsmath,amssymb}
 \newcommand{\tarc}{\mbox{\large$\frown$}}
@@ -31,6 +31,14 @@
 \DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
 
 \usepackage{enumerate}
+\usepackage[final]{pdfpages}
+\usepackage{tikz}
+\usepackage{capt-of}
+\usepackage{graphicx}
+\usepackage{multido}
+\usepackage{ifxetex}
+\includepdfset{offset=.25in 0in}
+
 
 \hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue}
 
@@ -54,16 +62,27 @@
             ]{XB Yas}
 %\pagestyle{empty}
 
+\setcounter{tocdepth}{1}
+
+%\ifxetex
+%    \newcount\pdflastximagepages
+%    \newcommand\pdfximage #1{\pdflastximagepages=\XeTeXpdfpagecount"#1"\relax}
+%\fi
+%\newcommand{\ajoutpdf}[2] {
+%    \pdfximage{#1}
+%    \multido{\i=1+1}{\the\pdflastximagepages}{%
+%        \includegraphics[page=\i,scale=#2]{#1}
+%        \newpage
+%    }
+%}
+\ifxetex
+    \newcount\pdflastximagepages
+    \def\pdfximage#1{\pdflastximagepages=\XeTeXpdfpagecount"#1"\relax}
+\fi
 \begin{document}
 	\include{files/titlepage}
-	%\pagebreak
-	%\input{files/Summary}
 	\tableofcontents
-	%\input{files/introduction}
-	%\input{files/Verilog}
-	%\input{files/GoldenModel}
-	%\input{files/Functions}
-	%\input{files/RunGoldenModel}
-	%\input{files/Conclusion}
-	%\input{files/References}
+	\input{files/PMP/PMP}
+	\pagebreak
+	\input{files/Agile/agile}
 \end{document}
