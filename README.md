@@ -1,5 +1,5 @@
 # IT-Project-Management-Final-Project
-##Final Project of IT Project Management Course
+## Final Project of IT Project Management Course
 
 
 This repository contains a complete Persian LaTeX project.
